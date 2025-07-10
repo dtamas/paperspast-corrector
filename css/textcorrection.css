@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Monaspace Neon Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Monaspace Neon Regular'), local('MonaspaceNeon-Regular'), url('chrome-extension://__MSG_@@extension_id__/fonts/MonaspaceNeon-Regular.woff')  format('woff');
+}
+
+div#articletextcorrectionpopup input[type="text"] {
+    font-family: "Monaspace Neon Regular", "Open Sans", serif;
+}
+
+a.copytoclipboard {
+    font-size: 130%;
+    padding: 0 .2em;
+    background: #ffffff;
+    border-radius: 4px;
+}
+
+a.copytoclipboard:hover {
+    background: #a0a0a0;
+}

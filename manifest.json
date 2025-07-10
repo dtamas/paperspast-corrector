@@ -1,0 +1,54 @@
+{
+    "version": "0.1",
+
+    "name": "Papers Past corrector",
+    "short_name": "PPc",
+
+    "description": "Tweaks to the text corrections feature of Papers Past https://paperspast.natlib.govt.nz/ ",
+
+
+    "manifest_version": 3,
+
+    "icons": {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
+
+    "action": {
+        "default_icon": "img/icon16.png",
+        "default_title": "Papers Past corrector",
+        "default_popup": "popup_help.html"
+    },
+    "content_scripts": [
+	{
+            "matches": [
+                "https://paperspast.natlib.govt.nz/newspapers/*"
+            ],
+            "exclude_matches": [
+            ],
+            "css": [
+                "css/textcorrection.css"
+            ],
+            "js": [
+                "js/textcorrection.js"
+            ],
+            "all_frames": true,
+            "run_at": "document_start"
+	}
+    ],
+    "web_accessible_resources": [
+	{
+	    "resources": [ "fonts/*.woff", "fonts/*.woff2" ],
+	    "matches": [ 
+		"https://paperspast.natlib.govt.nz/*"
+	    ]
+	}
+    ],
+    "permissions": [
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ]
+}
