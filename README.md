@@ -13,5 +13,5 @@ Chrome extension to improve [Papers Past](https://paperspast.natlib.govt.nz/) te
 ## How to install
 
 1. download and unpack the code
-2. open [Chrome extensions](chrome://extensions/)
+2. open chrome://extensions/
 3. press "Load Unpacked" and select the directory the code has been unpacked to
