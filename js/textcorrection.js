@@ -1,6 +1,6 @@
 function autocorrectText() {
     document.querySelectorAll('input[name=ntv]').forEach((input) => {
-	let SYMBOLS = {'ß':'s', '«':'', 'fc':'t', 'VV':'W'};
+	let SYMBOLS = {'ß':'s', '«':'', 'fc':'t', 'VV':'W', 'iVT':'M'};
 	let WORDS = {
 "aad":"and",
 "afc":"at",
@@ -10,13 +10,17 @@ function autocorrectText() {
 "aucl":"and",
 "aud":"and",
 "Bey.":"Rev.",
+"bis":"his",
+"Bth":"8th",
 "bo":"be",
 "cf":"of",
 "fche":"the",
 "fco":"to",
 "ft":"a",
+"haa":"has",
 "havo":"have",
 "ho":"he",
+"Ho":"He",
 "ia":"in",
 "Ifc":"It",
 "Ihe":"The",
@@ -24,13 +28,19 @@ function autocorrectText() {
 "iu":"in",
 "iv":"in",
 "lias":"has",
+"lhe":"The",
+"ln":"In",
 "lt":"It",
 "m":"in",
+"Mi-":"Mr",
 "mado":"made",
 "nigbfc":"night",
 "nofc":"not",
 "o£":"of",
 "ot":"of",
+"ou":"on",
+"Sth":"8th",
+"tbat":"that",
 "tbe":"the",
 "tbo":"the",
 "tlie":"the",
@@ -41,8 +51,11 @@ function autocorrectText() {
 "thb":"the",
 "Tho":"The",
 "tho":"the",
+"tne":"the",
 "Tub":"The",
+"uot":"not",
 "vvas":"was",
+"waa":"was",
 "wiah":"wish",
 "whieh":"which",
 "wo":"we",
@@ -69,7 +82,7 @@ function autocorrectText() {
 }
 
 function restoreLastInputFocus() {
-    if (window.lastInput) {
+    if (window.lastInput && window.lastInput[0].selectionStart) {
 	window.lastInput[0].focus({focusVisible:true});
 	window.lastInput[0].selectionStart = window.lastInput[1];
 	window.lastInput[0].selectionEnd = window.lastInput[2];
